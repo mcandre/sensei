@@ -2,15 +2,17 @@
 
 ## REQUIREMENTS
 
- * [Python](http://python.org/)
- * [SimpleCV](http://simplecv.org/)
+* [Python](http://python.org/)
+* [SimpleCV](http://simplecv.org/)
 
 ## EXAMPLES
 
 ![screenshot](https://github.com/mcandre/sensei/raw/master/shot.png)
 
-	$ python sensei.py
-	...
+```
+$ python sensei.py
+...
+```
 
 ## CREDITS
 
