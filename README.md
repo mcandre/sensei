@@ -1,11 +1,15 @@
 # sensei - Learn Japanese by computer
 
-## REQUIREMENTS
+# REQUIREMENTS
 
 * [Python](http://python.org/)
 * [SimpleCV](http://simplecv.org/)
 
-## EXAMPLES
+## Optional
+
+* [libxml2](http://xmlsoft.org/)
+
+# EXAMPLES
 
 ![screenshot](https://github.com/mcandre/sensei/raw/master/shot.png)
 
@@ -14,9 +18,9 @@ $ python sensei.py
 ...
 ```
 
-## CREDITS
+# CREDITS
 
-### Haar patterns
+## Haar patterns
 
 [OpenCV](http://opencv.willowgarage.com/wiki/)
 [Andol](http://www.andol.info/)
