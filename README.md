@@ -7,7 +7,20 @@
 
 ## Optional
 
+* [pep8](https://pypi.python.org/pypi/pep8)
+* [pylint](https://pypi.python.org/pypipylint)
+* [pyflakes](https://pypi.python.org/pypi/pyflakes)
 * [libxml2](http://xmlsoft.org/)
+
+E.g., Mac users can install these dependencies with:
+
+```
+$ brew install libxml2 python
+```
+
+```
+$ pip install pep8 pylint pyflakes
+```
 
 # EXAMPLES
 

@@ -26,7 +26,7 @@ def main():
   lessons = [
     "kao", # face
     "me", # eyes
-    "hana" #nose
+    "hana" # nose
     ]
 
   lesson = random.choice(lessons)
@@ -36,10 +36,10 @@ def main():
   image = camera.getImage()
   w, h = image.size()
 
-  kao_pos = [w-100, 100]
-  me_pos = [w-100, h/2]
-  hana_pos = [w-100, h-100]
-  result_pos = [100, h-100]
+  kao_pos = [w - 100, 100]
+  me_pos = [w - 100, h / 2]
+  hana_pos = [w - 100, h - 100]
+  result_pos = [100, h - 100]
   next_lesson_pos = [100, 100]
 
   default_color = SimpleCV.Color.GREEN

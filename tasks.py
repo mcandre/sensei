@@ -1,6 +1,10 @@
 from invoke import run, task
 
 @task
+def pep8():
+  run('pep8 .')
+
+@task
 def pylint():
   run("pylint *.py")
 
@@ -16,6 +20,6 @@ def editorconfig():
 def xmllint():
   run('find . -name "*.xml" -exec xmllint --noout {} 2>&1 \\;')
 
-@task("pylint", "pyflakes", "editorconfig", "xmllint")
+@task("pep8", "pylint", "pyflakes", "editorconfig", "xmllint")
 def lint():
   pass
