@@ -20,6 +20,6 @@ def editorconfig():
 def xmllint():
   run('find . -name "*.xml" -exec xmllint --noout {} 2>&1 \\;')
 
-@task("pep8", "pylint", "pyflakes", "editorconfig", "xmllint")
+@task(pre=[pep8, pylint, pyflakes, editorconfig, xmllint])
 def lint():
   pass
