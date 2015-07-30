@@ -8,17 +8,17 @@ def pep8():
 
 @task
 def pylint():
-    run("pylint *.py")
+    run('pylint *.py')
 
 
 @task
 def pyflakes():
-    run("pyflakes .")
+    run('pyflakes .')
 
 
 @task
 def flake8():
-    run("flake8 .")
+    run('flake8 .')
 
 
 @task

@@ -11,9 +11,9 @@ import os
 import time
 
 ENGLISH = {
-    "kao": "face",
-    "me": "eyes",
-    "hana": "nose"
+    'kao': 'face',
+    'me': 'eyes',
+    'hana': 'nose'
 }
 
 
@@ -22,17 +22,17 @@ def main():
 
     d = os.path.abspath(os.path.dirname(sys.argv[0])) + os.sep
 
-    haar_hand = d + "haar-hand.xml"
+    haar_hand = d + 'haar-hand.xml'
 
     lessons = [
-        "kao",  # face
-        "me",   # eyes
-        "hana"  # nose
+        'kao',  # face
+        'me',   # eyes
+        'hana'  # nose
     ]
 
     lesson = random.choice(lessons)
 
-    haar = d + "haar-" + ENGLISH[lesson] + ".xml"
+    haar = d + 'haar-' + ENGLISH[lesson] + '.xml'
 
     image = camera.getImage()
     w, h = image.size()
@@ -57,13 +57,13 @@ def main():
         hands = image.findHaarFeatures(haar_hand)
 
         colors = {
-            "kao": default_color,
-            "me": default_color,
-            "hana": default_color,
-            "nextlesson": next_lesson_color
+            'kao': default_color,
+            'me': default_color,
+            'hana': default_color,
+            'nextlesson': next_lesson_color
         }
 
-        result = ""
+        result = ''
 
         try:
             features.draw(default_color)
@@ -71,55 +71,55 @@ def main():
             hand.draw(select_color)
 
             if hand.distanceFrom((kao_pos[0], kao_pos[1])) < 100:
-                colors["kao"] = select_color
-                if lesson == "kao":
-                    result = "hai"
+                colors['kao'] = select_color
+                if lesson == 'kao':
+                    result = 'hai'
                 else:
-                    result = "ie"
+                    result = 'ie'
             elif hand.distanceFrom((me_pos[0], me_pos[1])) < 100:
-                colors["me"] = select_color
-                if lesson == "me":
-                    result = "hai"
+                colors['me'] = select_color
+                if lesson == 'me':
+                    result = 'hai'
                 else:
-                    result = "ie"
+                    result = 'ie'
             elif hand.distanceFrom((hana_pos[0], hana_pos[1])) < 100:
-                colors["hana"] = select_color
-                if lesson == "hana":
-                    result = "hai"
+                colors['hana'] = select_color
+                if lesson == 'hana':
+                    result = 'hai'
                 else:
-                    result = "ie"
+                    result = 'ie'
             elif hand.distanceFrom(
                 (next_lesson_pos[0], next_lesson_pos[1])
             ) < 100:
-                colors["nextlesson"] = select_color
+                colors['nextlesson'] = select_color
                 lesson = random.choice(lessons)
-                haar = d + "haar-" + ENGLISH[lesson] + ".xml"
+                haar = d + 'haar-' + ENGLISH[lesson] + '.xml'
         except:
             pass
         finally:
             image.drawText(
-                "kao",
+                'kao',
                 kao_pos[0],
                 kao_pos[1],
-                colors["kao"],
+                colors['kao'],
                 40
             )
             image.drawText(
-                "me",
+                'me',
                 me_pos[0],
                 me_pos[1],
-                colors["me"],
+                colors['me'],
                 40
             )
             image.drawText(
-                "hana",
+                'hana',
                 hana_pos[0],
                 hana_pos[1],
-                colors["hana"],
+                colors['hana'],
                 40
             )
 
-            if result != "":
+            if result != '':
                 image.drawText(
                     result,
                     result_pos[0],
@@ -128,10 +128,10 @@ def main():
                     40
                 )
                 image.drawText(
-                    ">",
+                    '>',
                     next_lesson_pos[0],
                     next_lesson_pos[1],
-                    colors["nextlesson"],
+                    colors['nextlesson'],
                     40
                 )
 
@@ -139,7 +139,7 @@ def main():
 
                 time.sleep(0.1)
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     try:
         main()
     except KeyboardInterrupt:
