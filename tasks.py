@@ -17,6 +17,11 @@ def pyflakes():
 
 
 @task
+def flake8():
+    run("flake8 .")
+
+
+@task
 def editorconfig():
     run('find . -type f -name Thumbs.db'
         ' -prune -o -type f -name .DS_Store'
@@ -68,6 +73,6 @@ def xmllint():
     run('find . -name "*.xml" -exec xmllint --noout {} 2>&1 \\;')
 
 
-@task(pre=[pep8, pylint, pyflakes, editorconfig, xmllint])
+@task(pre=[pep8, pylint, pyflakes, flake8, editorconfig, xmllint])
 def lint():
     pass
