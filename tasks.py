@@ -73,6 +73,11 @@ def xmllint():
     run('find . -name "*.xml" -exec xmllint --noout {} 2>&1 \\;')
 
 
-@task(pre=[pep8, pylint, pyflakes, flake8, editorconfig, xmllint])
+@task
+def bandit():
+    run('find . -name \'*.py\' | xargs bandit')
+
+
+@task(pre=[pep8, pylint, pyflakes, flake8, editorconfig, xmllint, bandit])
 def lint():
     pass
