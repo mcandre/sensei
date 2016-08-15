@@ -94,8 +94,8 @@ def main():
                 colors['nextlesson'] = select_color
                 lesson = random.choice(lessons)
                 haar = d + 'haar-' + ENGLISH[lesson] + '.xml'
-        except:
-            pass
+        except Exception as e:
+            print(e)
         finally:
             image.drawText(
                 'kao',
