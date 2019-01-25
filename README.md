@@ -1,5 +1,14 @@
 # sensei - Learn Japanese by computer
 
+# EXAMPLES
+
+![screenshot](https://github.com/mcandre/sensei/raw/master/shot.png)
+
+```console
+$ python sensei.py
+...
+```
+
 # REQUIREMENTS
 
 * [Python](http://python.org/)
@@ -7,29 +16,11 @@
 
 ## Optional
 
-* [pep8](https://pypi.python.org/pypi/pep8)
-* [pylint](https://pypi.python.org/pypipylint)
-* [pyflakes](https://pypi.python.org/pypi/pyflakes)
-* [libxml2](http://xmlsoft.org/)
-
-E.g., Mac users can install these dependencies with:
-
-```
-$ brew install libxml2 python
-```
-
-```
-$ pip install pep8 pylint pyflakes
-```
-
-# EXAMPLES
-
-![screenshot](https://github.com/mcandre/sensei/raw/master/shot.png)
-
-```
-$ python sensei.py
-...
-```
+* [make](https://www.gnu.org/software/make/)
+* [GNU findutils](https://www.gnu.org/software/findutils/)
+* [stank](https://github.com/mcandre/stank) (e.g. `go get github.com/mcandre/stank/...`)
+* [Python](https://www.python.org) 3+ (for yamllint)
+* [Node.js](https://nodejs.org/en/) (for eclint)
 
 # CREDITS
 

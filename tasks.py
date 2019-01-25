@@ -2,6 +2,11 @@ from invoke import run, task
 
 
 @task
+def safety():
+    run('safety check')
+
+
+@task
 def pep8():
     run('pep8 .')
 
@@ -36,6 +41,6 @@ def bandit():
     run('find . -name \'*.py\' | xargs bandit')
 
 
-@task(pre=[pep8, pylint, pyflakes, flake8, editorconfig, xmllint, bandit])
+@task(pre=[safety, pep8, pylint, pyflakes, flake8, editorconfig, xmllint, bandit])
 def lint():
     pass
